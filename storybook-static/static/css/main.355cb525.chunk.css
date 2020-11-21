@@ -1,0 +1,213 @@
+.buttonCompo {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.primaryButtonCompo {background-color: #1ea7fd;}
+.secondaryButtonCompo {background-color: beige; color: black;}
+.successButtonCompo {background-color: #66bf3c;}
+.dangerButtonCompo {background-color: orangered;}
+
+.footerFootercompo {
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    line-height: 200%;
+    color: white;
+    background-color: #001F2A;
+}
+
+.inputCompo {
+    display: block;
+    width: 400px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid inherit;
+    background-color: white;
+}
+
+.smallinputCompo {
+    height: 2rem;
+    font-size: 0.9rem;
+}
+
+.mediuminputCompo {
+    height: 2.5rem;
+    font-size: 1rem;
+}
+
+.largeinputCompo {
+    height: 3rem;
+    font-size: 1.25rem;
+}
+
+#navNavbar {
+    background-color: #393939;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#navNavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#navNavbar ul li {
+    display: inline;
+    }
+
+#navNavbar a{
+    color: white;
+    padding: 1.5%;
+    text-decoration: none;
+}
+.divE1 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0;
+    text-align:  center;
+    background-color: #EDEDED;
+}
+
+.imgE1 {
+    width: 96%;
+    margin: 2%;
+}
+
+.bodyE1 {
+    margin: 0;
+}
+
+.bodyE2 {
+    background-color: #b2d6d1;
+    text-align: center;
+    font-family: Arial,sans-serif;
+    height: 100vh;
+}
+
+#formdiv {
+    background-color: #EDEDED;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.formE2 {
+    padding: 20px;
+}
+
+.labelE2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableE2 {
+    margin: 0;
+    width: 100%;
+}
+
+.label {
+    text-align: right;
+}
+
+.label, .input {
+    width: 50%;
+}
+
+.input {
+    text-align: left;
+}
+
+.inputE2 {
+    margin: 10px;
+}
+.ulE3 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.ulE3 li {
+    display: inline;
+}
+
+.ulE3 a {
+    color: white;
+    padding: 1%;
+    text-decoration: none;
+}
+
+.navE3 {
+    background-color: #393939;
+    padding: 15px;
+    font-size: 15px;
+}
+
+.bodyE3 {
+    margin: 0;
+    font-family: Arial,sans-serif;
+    text-align: center;
+    background-color: #EDEDED;
+    height: 100vh;
+}
+
+.imgE3 {
+    max-width: 30%;
+    max-height: 60vh;
+    float: left;
+    margin-left: 30px;
+}
+
+#content {
+    margin-top: 50px;
+    line-height: 350%;
+
+}
+
+#buttonE3 {
+    background-color: #FD8944;
+    border-radius: 5px;
+    border-color: #FD8944;
+    border-style: solid;
+    color: white;
+    font-family: Arial Narrow ,sans-serif;
+}
+
+.footerE3 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    line-height: 200%;
+    color: white;
+    background-color: #001F2A;
+}
+
+div #buttonE3 {
+    padding: 5px 20px;
+}
+
+.footerE3 #buttonE3 {
+    padding: 5px 80px;
+}
+
+
+/*# sourceMappingURL=main.355cb525.chunk.css.map*/
