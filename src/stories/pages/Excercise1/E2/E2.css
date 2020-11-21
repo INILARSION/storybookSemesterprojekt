@@ -1,0 +1,44 @@
+.bodyE2 {
+    background-color: #b2d6d1;
+    text-align: center;
+    font-family: Arial,sans-serif;
+    height: 100vh;
+}
+
+#formdiv {
+    background-color: #EDEDED;
+    padding-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.formE2 {
+    padding: 20px;
+}
+
+.labelE2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tableE2 {
+    margin: 0;
+    width: 100%;
+}
+
+.label {
+    text-align: right;
+}
+
+.label, .input {
+    width: 50%;
+}
+
+.input {
+    text-align: left;
+}
+
+.inputE2 {
+    margin: 10px;
+}

@@ -1,0 +1,22 @@
+#navNavbar {
+    background-color: #393939;
+    padding: 15px;
+    font-size: 15px;
+}
+
+#navNavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#navNavbar ul li {
+    display: inline;
+    }
+
+#navNavbar a{
+    color: white;
+    padding: 1.5%;
+    text-decoration: none;
+}
