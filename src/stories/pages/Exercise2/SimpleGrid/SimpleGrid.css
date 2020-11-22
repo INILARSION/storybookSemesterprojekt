@@ -1,0 +1,99 @@
+#SimpleGridUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0 0;
+    text-align: center;
+}
+
+#SimpleGrida {
+    color: white;
+    padding: 1%;
+    text-decoration: none;
+}
+
+#SimpleGridli {
+    display: inline;
+}
+
+#SimpleGridnav {
+    background-color: #393939;
+    font-size: 15px;
+    height: 40px;
+    padding: 0;
+}
+
+#SimpleGrid {
+    margin: 0;
+    font-family: Arial,sans-serif;
+    text-align: center;
+    background-color: #EDEDED;
+}
+
+.SimpleGridgrid{
+    display: grid;
+    min-height: calc(100vh - 40px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "headline headline"
+                                 "left right"
+                                 "foot foot"
+}
+
+@media screen and (max-width: 1024px) {
+    .SimpleGridgrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "headline"
+                                     "left"
+                                     "right"
+                                     "foot";
+    }
+
+    .SimpleGridleft {
+        height: 40vh;
+        margin: auto;
+    }
+}
+
+.SimpleGridheadline {
+    grid-area: headline;
+}
+
+.SimpleGridleft {
+    grid-area: left;
+    height: 40vh;
+    margin-left: 20vw;
+}
+
+.SimpleGridcontent {
+    line-height: 350%;
+    grid-area: right;
+}
+
+.SimpleGridbutton {
+    background-color: #FD8944;
+    border-radius: 5px;
+    border-color: #FD8944;
+    border-style: solid;
+    color: white;
+    font-family: Arial Narrow ,sans-serif;
+}
+
+.SimpleGridfooter {
+    height: 60px;
+    grid-area: foot;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    line-height: 200%;
+    color: white;
+    background-color: #001F2A;
+}
+
+.SimpleGridcontent .SimpleGridbutton {
+    padding: 5px 20px;
+}
+
+.SimpleGridfooter .SimpleGridbutton {
+    padding: 5px 80px;
+}

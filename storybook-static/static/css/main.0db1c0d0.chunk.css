@@ -1,20 +1,3 @@
-.buttonCompo {
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.primaryButtonCompo {background-color: #1ea7fd;}
-.secondaryButtonCompo {background-color: beige; color: black;}
-.successButtonCompo {background-color: #66bf3c;}
-.dangerButtonCompo {background-color: orangered;}
-
 .footerFootercompo {
     font-size: 15px;
     position: fixed;
@@ -26,31 +9,6 @@
     line-height: 200%;
     color: white;
     background-color: #001F2A;
-}
-
-.inputCompo {
-    display: block;
-    width: 400px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 0.25rem;
-    border: 1px solid inherit;
-    background-color: white;
-}
-
-.smallinputCompo {
-    height: 2rem;
-    font-size: 0.9rem;
-}
-
-.mediuminputCompo {
-    height: 2.5rem;
-    font-size: 1rem;
-}
-
-.largeinputCompo {
-    height: 3rem;
-    font-size: 1.25rem;
 }
 
 #navNavbar {
@@ -75,6 +33,7 @@
     padding: 1.5%;
     text-decoration: none;
 }
+
 .divE1 {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -209,5 +168,38 @@ div #buttonE3 {
     padding: 5px 80px;
 }
 
+#frontpageBody {
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 1.5fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navig navig navig"
+                        "left content right"
+                        "foot foot foot";
+}
 
-/*# sourceMappingURL=main.355cb525.chunk.css.map*/
+#frontpageLeft {
+    grid-area: left;
+}
+
+#frontpageRight {
+    grid-area: right;
+}
+
+#frontpageContent {
+    grid-area: content;
+    text-align: center;
+    min-height: calc(100vh - 48px - 85px);
+}
+
+#frontpageNav {
+    grid-area: navig;
+}
+
+
+
+#frontpageFooter {
+    grid-area: foot;
+}
+
+
+/*# sourceMappingURL=main.0db1c0d0.chunk.css.map*/

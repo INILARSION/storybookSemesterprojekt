@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Landing Page</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0 0;
+            text-align: center;
+        }
+
+        a {
+            color: white;
+            padding: 1%;
+            text-decoration: none;
+        }
+
+        li {
+            display: inline;
+        }
+
+        nav {
+            background-color: #393939;
+            font-size: 15px;
+            height: 40px;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial,sans-serif;
+            text-align: center;
+            background-color: #EDEDED;
+        }
+
+        img {
+            height: 40vh;
+            margin-left: 20vw;
+        }
+
+        .grid{
+            display: grid;
+            min-height: calc(100vh - 40px);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "headline headline"
+                                 "left right"
+                                 "foot foot"
+        }
+
+        @media screen and (max-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: "headline"
+                                     "left"
+                                     "right"
+                                     "foot";
+            }
+
+            img {
+                height: 40vh;
+                margin: auto;
+            }
+        }
+
+        .headline {
+            grid-area: headline;
+        }
+
+        .left {
+            grid-area: left;
+        }
+
+        .content {
+            line-height: 350%;
+            grid-area: right;
+        }
+
+        button {
+            background-color: #FD8944;
+            border-radius: 5px;
+            border-color: #FD8944;
+            border-style: solid;
+            color: white;
+            font-family: Arial Narrow ,sans-serif;
+        }
+
+        footer {
+            height: 60px;
+            grid-area: foot;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            line-height: 200%;
+            color: white;
+            background-color: #001F2A;
+        }
+
+        div button {
+            padding: 5px 20px;
+        }
+
+        footer button {
+            padding: 5px 80px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="book.html">The book series</a></li>
+        <li><a href="tests.html">Testimonials</a></li>
+        <li><a href="author.html">The Author</a></li>
+        <li><a href="res.html">Free resources</a></li>
+    </ul>
+</nav>
+
+<div class="grid">
+    <h1 class="headline">You dont know JavaScript</h1>
+
+    <img class="left" src="https://kaul.inf.h-brs.de/wem/assets/img/landing-img.png">
+
+    <div class="content">
+        Don't just drift through Javascript. <br>
+        Understand how Javascript works <br>
+        Start your journey through the bumpy side of Javascript <br>
+        <button>ORDER YOUR COPY NOW</button>
+    </div>
+
+
+    <footer>
+        The first ebook in the book series is absolutely free. <br>
+        <button>FIND OUT MORE ABOUT THIS OFFER</button>
+    </footer>
+
+
+</div>
+
+</body>
+</html>
