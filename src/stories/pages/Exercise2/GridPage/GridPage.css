@@ -70,7 +70,7 @@
     grid-area: right;
 }
 
-.SimpleGridbutton {
+#SimpleGridbutton {
     background-color: #FD8944;
     border-radius: 5px;
     border-color: #FD8944;
@@ -79,7 +79,7 @@
     font-family: Arial Narrow ,sans-serif;
 }
 
-.SimpleGridfooter {
+#SimpleGridfooter {
     height: 60px;
     grid-area: foot;
     width: 100%;
@@ -90,10 +90,10 @@
     background-color: #001F2A;
 }
 
-.SimpleGridcontent .SimpleGridbutton {
+.SimpleGridcontent #SimpleGridbutton {
     padding: 5px 20px;
 }
 
-.SimpleGridfooter .SimpleGridbutton {
+#SimpleGridfooter #SimpleGridbutton {
     padding: 5px 80px;
 }

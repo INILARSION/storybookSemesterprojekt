@@ -1,6 +1,7 @@
 import React from 'react';
+import "./GridPage.css"
 
-function SimpleGrid (props) {
+function GridPageTag (props) {
     return (
         <article id={"SimpleGrid"}>
             <nav id={"SimpleGridnav"}>
@@ -21,13 +22,13 @@ function SimpleGrid (props) {
                         Don't just drift through Javascript. <br/>
                         Understand how Javascript works <br/>
                         Start your journey through the bumpy side of Javascript <br/>
-                        <button classname={"SimpleGridbutton"}>ORDER YOUR COPY NOW</button>
+                        <button id={"SimpleGridbutton"}>ORDER YOUR COPY NOW</button>
                     </div>
 
 
                     <footer id={"SimpleGridfooter"}>
                         The first ebook in the book series is absolutely free. <br/>
-                        <button classname={"SimpleGridbutton"}>FIND OUT MORE ABOUT THIS OFFER</button>
+                        <button id={"SimpleGridbutton"}>FIND OUT MORE ABOUT THIS OFFER</button>
                     </footer>
 
 
@@ -37,4 +38,4 @@ function SimpleGrid (props) {
     )
 }
 
-export default SimpleGrid
+export default GridPageTag

@@ -1,0 +1,80 @@
+
+#SimpleGridbox {
+    padding: 0;
+    margin: 0;
+}
+
+.SimpleGridboxgrid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+    grid-template-areas:
+                    'head'
+                    'left'
+                    'center'
+                    'right';
+    grid-gap: 0.5%;
+    width: 100%;
+    height: 150vh;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .SimpleGridboxgrid-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas:
+                        'head head head'
+                        'left center right';
+        grid-gap: 0.5%;
+        width: 100%;
+        height: 97vh;
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px){
+    .SimpleGridboxgrid-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 4fr 1fr;
+        grid-template-areas:
+                        'head head'
+                        'left center'
+                        'right right';
+        grid-gap: 0.5%;
+        width: 100%;
+        height: 120vh;
+    }
+}
+
+
+
+
+
+
+
+
+.SimpleGridboxheader {
+    grid-area: head;
+    background-color: red;
+}
+
+.SimpleGridboxasideLeft {
+    grid-area: left;
+    background-color: limegreen;
+}
+
+.SimpleGridboxcenter {
+    grid-area: center;
+    background-color: blue;
+}
+
+.SimpleGridboxasideRight {
+    grid-area: right;
+    background-color: fuchsia;
+}

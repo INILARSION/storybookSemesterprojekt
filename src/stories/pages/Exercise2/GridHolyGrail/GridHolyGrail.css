@@ -1,0 +1,95 @@
+#GridHolyGrail {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+#GridHolyGrailh2 {
+    color: white;
+    margin-top: 0;
+}
+#GridHolyGrailheader {
+    width: 100%;
+    height: 90px;
+    background-color: #C34C51;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#GridHolyGrailheader #GridHolyGrailul {
+    text-align: left;
+    padding-bottom: 2vh;
+    margin-bottom: 0;
+}
+#GridHolyGrailheader #GridHolyGrailul #GridHolyGrailli {
+    display: inline;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #67709B;
+    border: 3px groove #EDEDED;
+    border-radius: 20px;
+    padding: 0 2vw;
+}
+
+.GridHolyGrailcontent {
+    display: grid;
+    min-height: calc(100vh - 90px);
+    grid-template-columns: 1.5fr 6fr 1.5fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "left center right"
+                                 "footer footer footer"
+}
+
+@media screen and (max-width: 1024px) {
+    .GridHolyGrailcontent {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "left center"
+                                     "right right"
+                                     "footer footer";
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .GridHolyGrailcontent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "left"
+                                     "center"
+                                     "right"
+                                     "footer";
+    }
+}
+
+.GridHolyGrailleft {
+    grid-area: left;
+}
+
+.GridHolyGrailcenter {
+    background-color: #649EBA;
+    grid-area: center;
+    color: white;
+}
+
+.GridHolyGrailright, .GridHolyGrailleft {
+    background-color: #C38081;
+    color: white;
+    font-size: 25px;
+}
+
+.GridHolyGrailright {
+    grid-area: right;
+}
+
+
+#GridHolyGrailfooter {
+    grid-area: footer;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    height: 30px;
+}
+#GridHolyGrailfooter #GridHolyGraila {
+    color: white;
+    font-size: 15px;
+}

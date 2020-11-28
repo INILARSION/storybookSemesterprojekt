@@ -1,0 +1,89 @@
+#FlexHolyGrail {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+#FlexHolyGrailh2 {
+    color: white;
+    margin-top: 0;
+}
+#FlexHolyGrailheader {
+    width: 100%;
+    height: 90px;
+    background-color: #C34C51;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#FlexHolyGrailheader #FlexHolyGrailul {
+    text-align: left;
+    padding-bottom: 2vh;
+    margin-bottom: 0;
+}
+#FlexHolyGrailheader #FlexHolyGrailul #FlexHolyGrailli {
+    display: inline;
+    font-size: 20px;
+    font-family: Arial;
+    background-color: #67709B;
+    border: 3px groove #EDEDED;
+    border-radius: 20px;
+    padding: 0 2vw;
+}
+
+.FlexHolyGrailcontent {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 90px - 30px);
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+@media screen and (max-width: 1024px) {
+    .FlexHolyGrailright {
+        min-width: 100vw;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .FlexHolyGrailleft, .FlexHolyGrailright {
+        min-width: 100vw;
+    }
+}
+
+.FlexHolyGrailleft {
+    order: 1;
+}
+
+.FlexHolyGrailcenter {
+    order: 2;
+    background-color: #649EBA;
+    color: white;
+    flex: 1;
+
+}
+
+.FlexHolyGrailright, .FlexHolyGrailleft {
+    background-color: #C38081;
+    color: white;
+    font-size: 25px;
+    flex: 0 0 20vw;
+    align-self: stretch;
+    width: 100%;
+}
+
+.FlexHolyGrailright {
+    order: 3;
+}
+
+
+#FlexHolyGrailfooter {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    height: 30px;
+}
+#FlexHolyGrailfooter #FlexHolyGraila {
+    color: white;
+    font-size: 15px;
+}

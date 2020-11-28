@@ -2,8 +2,8 @@ import React from "react";
 import E2 from "./E2";
 
 export default {
-    title: 'Pages/E1/E2',
+    title: 'Exercises/E1',
     component: E2,
 }
 
-export const Template = (args) => <E2 {...args} />;
+export const Exercise2 = (args) => <E2 {...args} />;

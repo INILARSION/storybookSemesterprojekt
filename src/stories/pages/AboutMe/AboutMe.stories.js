@@ -2,7 +2,7 @@ import React from "react";
 import AboutMe from "./AboutMe";
 
 export default {
-    title: 'Pages/AboutMe',
+    title: 'AboutMe',
     component: AboutMe,
 }
 
