@@ -1,0 +1,59 @@
+#Editor {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: arial, sans-serif;
+}
+
+#Editoreditor {
+    width: 90vw;
+    height: 90vh;
+    box-shadow: 0 0 2px 2px grey;
+    border: 2px solid;
+    border-radius: 3px;
+}
+
+#Editortoolbar {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    box-shadow: 0 2px 2px grey;
+}
+
+.Editorbtn {
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.2s ease all;
+    padding: 0;
+    margin: 0;
+}
+
+.Editorbtn button {
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+
+.Editorbtn:hover {
+    background-color: #e1e1e1;
+    cursor: pointer;
+}
+
+#Editorcontent-area {
+    padding: 15px 12px;
+    line-height: 1.5;
+    height: 80vh;
+}
+
+#Editortext-box {
+    outline: none;
+    height: 80vh;
+}
+
+#Editortext-box p {
+    margin: 12px 0;
+}
