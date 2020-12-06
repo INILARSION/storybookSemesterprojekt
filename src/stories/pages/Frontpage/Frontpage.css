@@ -17,9 +17,22 @@
 }
 
 #frontpageContent {
+    font-family: Arial, sans-serif;
     grid-area: content;
     text-align: center;
     min-height: calc(100vh - 48px - 85px);
+    background-color: #ececec;
+}
+
+#frontpageContent hr {
+    color: lightgray;
+}
+
+#frontpageContent img {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
 }
 
 #frontpageNav {

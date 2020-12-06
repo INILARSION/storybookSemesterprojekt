@@ -2,7 +2,7 @@ import React from "react";
 import EditorTag from "./Editor";
 
 export default {
-    title: 'Exercises/E4',
+    title: 'E4',
     component: EditorTag,
 }
 

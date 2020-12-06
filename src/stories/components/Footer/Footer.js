@@ -5,7 +5,7 @@ function Footer(props) {
     const {children, ...rest} = props
     return (
         <div className={"footerFootercompo"}>
-
+            Semesterprjekt Wintersemester 2020/2021 im Modul Web Engineering
         </div>
     )
 }

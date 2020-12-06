@@ -2,7 +2,7 @@ import React from "react";
 import E1 from "./E1";
 
 export default {
-    title: 'Exercises/E1',
+    title: 'E1',
     component: E1,
 }
 

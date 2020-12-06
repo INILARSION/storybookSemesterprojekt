@@ -1,14 +1,12 @@
 .footerFootercompo {
     font-size: 15px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 20px;
     line-height: 200%;
     color: white;
     background-color: #001F2A;
+    text-align: center;
 }
 
 #navNavbar {
@@ -32,6 +30,88 @@
     color: white;
     padding: 1.5%;
     text-decoration: none;
+    cursor: pointer;
+}
+#aboutmeBody {
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 1.5fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navig navig navig"
+                        "left content right"
+                        "foot foot foot";
+}
+
+#aboutmeLeft {
+    grid-area: left;
+}
+
+#aboutmeRight {
+    grid-area: right;
+}
+
+#aboutmeContent {
+    font-family: Arial, sans-serif;
+    grid-area: content;
+    text-align: center;
+    min-height: calc(100vh - 48px - 85px);
+    background-color: #ececec;
+}
+
+#aboutmeNav {
+    grid-area: navig;
+}
+
+
+
+#aboutmeFooter {
+    grid-area: foot;
+}
+
+
+#frontpageBody {
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 1.5fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "navig navig navig"
+                        "left content right"
+                        "foot foot foot";
+}
+
+#frontpageLeft {
+    grid-area: left;
+}
+
+#frontpageRight {
+    grid-area: right;
+}
+
+#frontpageContent {
+    font-family: Arial, sans-serif;
+    grid-area: content;
+    text-align: center;
+    min-height: calc(100vh - 48px - 85px);
+    background-color: #ececec;
+}
+
+#frontpageContent hr {
+    color: lightgray;
+}
+
+#frontpageContent img {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#frontpageNav {
+    grid-area: navig;
+}
+
+
+
+#frontpageFooter {
+    grid-area: foot;
 }
 
 .divE1 {
@@ -698,38 +778,4 @@ div #buttonE3 {
     border-collapse: collapse
 }
 
-#frontpageBody {
-    display: grid;
-    grid-template-columns: 1.5fr 6fr 1.5fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "navig navig navig"
-                        "left content right"
-                        "foot foot foot";
-}
-
-#frontpageLeft {
-    grid-area: left;
-}
-
-#frontpageRight {
-    grid-area: right;
-}
-
-#frontpageContent {
-    grid-area: content;
-    text-align: center;
-    min-height: calc(100vh - 48px - 85px);
-}
-
-#frontpageNav {
-    grid-area: navig;
-}
-
-
-
-#frontpageFooter {
-    grid-area: foot;
-}
-
-
-/*# sourceMappingURL=main.1a05edff.chunk.css.map*/
+/*# sourceMappingURL=main.eb86e26e.chunk.css.map*/

@@ -2,7 +2,7 @@ import React from "react";
 import SimpleFlexboxTag from "./SimpleFlexbox";
 
 export default {
-    title: 'Exercises/E2',
+    title: 'E2',
     component: SimpleFlexboxTag,
 }
 

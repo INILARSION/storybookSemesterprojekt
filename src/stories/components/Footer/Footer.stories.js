@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 
 export default {
-    title: 'Form/Footer',
+    title: 'Components/Footer',
     component: Footer,
 }
 

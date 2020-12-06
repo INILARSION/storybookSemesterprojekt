@@ -1,9 +1,9 @@
 import React from "react";
-import AboutMe from "./AboutMe";
+import AboutMeTag from "./AboutMe";
 
 export default {
     title: 'AboutMe',
-    component: AboutMe,
+    component: AboutMeTag,
 }
 
-export const Template = (args) => <AboutMe {...args} />;
+export const AboutMe = (args) => <AboutMeTag {...args} />;

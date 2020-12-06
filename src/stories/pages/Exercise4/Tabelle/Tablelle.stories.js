@@ -2,7 +2,7 @@ import React from "react";
 import TabelleTag from "./Tabelle";
 
 export default {
-    title: 'Exercises/E4',
+    title: 'E4',
     component: TabelleTag,
 }
 
