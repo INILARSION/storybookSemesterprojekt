@@ -11,6 +11,7 @@ import U2E2SRC from "./thumbnails/U2E2.png"
 import U2E3SRC from "./thumbnails/U2E3.png"
 import U2E4SRC from "./thumbnails/U2E4.png"
 import U2E5SRC from "./thumbnails/U2E5.png"
+import U3SRC from "./thumbnails/U3.png"
 import U4E1SRC from "./thumbnails/U4E1.png"
 import U4E2SRC from "./thumbnails/U4E2.png"
 import U4E3SRC from "./thumbnails/U4E3.png"
@@ -50,7 +51,7 @@ function Frontpage (props) {
                 <img src={U2E5SRC} alt={"U2E5"} onClick={linkTo('E2', "Simple Gridbox")}/>
                 <hr/>
                 <h2>Übung3</h2>
-
+                <img src={U3SRC} alt={"U3"} onClick={linkTo('E3', "E 3")}/>
                 <hr/>
                 <h2>Übung4</h2>
                 <img src={U4E1SRC} alt={"U4E1"} onClick={linkTo("E4", "Editor")}/>
