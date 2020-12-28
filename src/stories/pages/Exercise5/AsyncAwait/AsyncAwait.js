@@ -1,10 +1,9 @@
 import React from 'react';
 
-let asyncAwaitdiv = document.getElementById("AsyncAwaitdiv");
 
 
 async function makeRequest(){
-    alert("NOW!!!!!")
+    let asyncAwaitdiv = document.getElementById("AsyncAwaitdiv");
     const aPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/A.txt");
     const bPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/B.txt");
 
@@ -30,19 +29,18 @@ async function makeRequest(){
     }
 }
 
-
+// somehow onLoad triggers before divs can be found?!
+function delay_call(){
+    setTimeout(makeRequest, 1000);
+}
 
 function AsyncAwaitTag (props) {
     return (
-        <article id={"AsyncAwait"}>
+        <article onLoad={delay_call()} id={"AsyncAwait"}>
             <div id="AsyncAwaitdiv">
-
             </div>
         </article>
     )
 }
-
-setTimeout(makeRequest, 1000);
-
 
 export default AsyncAwaitTag

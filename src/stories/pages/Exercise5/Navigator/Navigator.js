@@ -1,28 +1,38 @@
 import React from 'react';
 import "./Navigator.css"
 
-let leftul = document.getElementById("Navigatorleftul");
-let center = document.getElementById("Navigatorcenter");
-let right = document.getElementById("Navigatorright");
-let headerul = document.getElementById("Navigatorulheader");
 
-let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/Navigator.json");
+let leftul;
+let center;
+let right;
+let headerul;
 
-contentJson.then(contenLoaded => {
-    return contenLoaded.json();
-}).then(allContent => {
+function startNav() {
+    leftul = document.getElementById("Navigatorleftul");
+    center = document.getElementById("Navigatorcenter");
+    right = document.getElementById("Navigatorright");
+    headerul = document.getElementById("Navigatorulheader");
 
-    Object.keys(allContent).forEach(function (key){
-        let element = document.createElement("li");
-        element.className = "Navigatorli"
-        element.appendChild(document.createTextNode(key));
-        element.onclick = () => {
-            loadContent(key);
-        }
+    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/Navigator.json");
 
-        headerul.appendChild(element);
+    contentJson.then(contenLoaded => {
+        return contenLoaded.json();
+    }).then(allContent => {
+
+        Object.keys(allContent).forEach(function (key){
+            let element = document.createElement("li");
+            element.className = "Navigatorli"
+            element.appendChild(document.createTextNode(key));
+            element.onclick = () => {
+                loadContent(key);
+            }
+
+            headerul.appendChild(element);
+        });
     });
-});
+
+}
+
 
 function loadContent(text) {
     let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/Navigator.json");
@@ -48,10 +58,14 @@ function loadContent(text) {
     });
 }
 
+// somehow onLoad triggers before divs can be found?!
+function delay_call(){
+    setTimeout(startNav, 1000);
+}
 
 function NavigatorTag (props) {
     return (
-        <article id={"E5Navigator"}>
+        <article onLoad={delay_call()} id={"E5Navigator"}>
             <header id="Navigatorheader">
                 <h2 id="Navigatorh2">Header</h2>
                 <ul className="Navigatorul" id="Navigatorulheader">
