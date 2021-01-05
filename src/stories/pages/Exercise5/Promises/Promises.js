@@ -2,8 +2,8 @@ import React from 'react';
 
 function promiseRequest() {
     let promisesdiv = document.getElementById("Promisesdiv");
-    const aPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/A.txt");
-    const bPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/storybook-static/static/media/B.txt");
+    const aPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/A.txt");
+    const bPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/B.txt");
 
     aPromise.then(responseA => {
         return responseA.text();
@@ -37,9 +37,8 @@ function delay_call(){
 
 function PromisesTag (props) {
     return (
-        <article id={"Promises"}>
+        <article onLoad={delay_call()} id={"Promises"}>
             <div id="Promisesdiv">
-                <div id={"dummy"} onLoad={delay_call()}></div>
             </div>
         </article>
     )
