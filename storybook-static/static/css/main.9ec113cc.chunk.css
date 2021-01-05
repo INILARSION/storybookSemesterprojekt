@@ -895,5 +895,11 @@ div #buttonE3 {
     color: white;
     font-size: 15px;
 }
+.PrimWebworkerloader {width: 100%;height: 4em;   }
+#PrimWebworkercontainer {background-color: lightgrey;   }
+#PrimWebworkeranimate {background-color: yellow;   }
+.Primzahlloader {width: 100%;height: 4em;   }
+#Primzahlcontainer {background-color: lightgrey;   }
+#Primzahlanimate {background-color: yellow;   }
 
-/*# sourceMappingURL=main.34d883d6.chunk.css.map*/
+/*# sourceMappingURL=main.9ec113cc.chunk.css.map*/
