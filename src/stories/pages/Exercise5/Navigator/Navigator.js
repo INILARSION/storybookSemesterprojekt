@@ -13,7 +13,7 @@ function startNav() {
     right = document.getElementById("Navigatorright");
     headerul = document.getElementById("Navigatorulheader");
 
-    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/Navigator.json");
+    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/Navigator.json");
 
     contentJson.then(contenLoaded => {
         return contenLoaded.json();
@@ -35,7 +35,7 @@ function startNav() {
 
 
 function loadContent(text) {
-    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/Navigator.json");
+    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/Navigator.json");
     contentJson.then(contenLoaded => {
         return contenLoaded.json();
     }).then(allContent => {

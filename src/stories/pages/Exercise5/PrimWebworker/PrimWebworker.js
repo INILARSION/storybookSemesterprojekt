@@ -1,7 +1,6 @@
 import React from "react";
 import "./PrimWebworker.css";
 
-
 let PrimWebworkerdiv;
 let stop;
 let animate;
@@ -10,13 +9,6 @@ let t0;
 let t1;
 let animation;
 let worker;
-
-function createWorker(fn) {
-    let blob = new Blob(['self.onmessage = ', fn.toString()], { type: 'text/javascript' });
-    let url = URL.createObjectURL(blob);
-
-    return new Worker(url);
-}
 
 
 function getPrimes() {
@@ -51,8 +43,50 @@ function step(){
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    worker = new Worker("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/pages/PrimWebworkerworker.js");
-    //setTimeout(getPrimes, 1000);
+
+    let webworker_str = `
+let stop = false;
+
+self.addEventListener('message', function(e) {
+    if (e.data) {
+        stop = e.data;
+    } else {
+        writePrimes();
+    }
+}, false);
+
+let lastPrime = 0;
+
+function nextPrime(value) {
+    if (value > 2) {
+        let i, q;
+        do {
+            i = 3;
+            value += 2;
+            q = Math.floor(Math.sqrt(value));
+            while (i <= q && value % i) {
+                i += 2;
+            }
+        } while (i <= q);
+        return value;
+    }
+    return value === 2 ? 3 : 2;
+}
+
+function writePrimes(){
+    lastPrime = nextPrime(lastPrime);
+    self.postMessage(lastPrime);
+    if (!stop){
+        setTimeout(writePrimes, 0);
+    }
+}
+
+`;
+
+    let blob = new Blob([webworker_str], {type: 'application/javascript'});
+
+    worker = new Worker(URL.createObjectURL(blob));
+    setTimeout(getPrimes, 1000);
 }
 
 function PrimWebworkerTag (props) {

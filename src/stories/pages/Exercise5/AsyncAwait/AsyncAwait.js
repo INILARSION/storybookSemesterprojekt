@@ -4,8 +4,8 @@ import React from 'react';
 
 async function makeRequest(){
     let asyncAwaitdiv = document.getElementById("AsyncAwaitdiv");
-    const aPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/A.txt");
-    const bPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/B.txt");
+    const aPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/A.txt");
+    const bPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/B.txt");
 
     let aResult = await aPromiseAwait;
     let bResult = await bPromiseAwait;

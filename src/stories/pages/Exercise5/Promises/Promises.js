@@ -2,8 +2,8 @@ import React from 'react';
 
 function promiseRequest() {
     let promisesdiv = document.getElementById("Promisesdiv");
-    const aPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/A.txt");
-    const bPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/tree/master/src/stories/assets/B.txt");
+    const aPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/A.txt");
+    const bPromise = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/B.txt");
 
     aPromise.then(responseA => {
         return responseA.text();
