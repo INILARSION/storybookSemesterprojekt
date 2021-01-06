@@ -13,6 +13,7 @@ let worker;
 
 function getPrimes() {
     PrimWebworkerdiv = document.getElementById("PrimWebworkerdiv");
+    PrimWebworkerdiv.innerHTML = "";
     stop = false;
     animate = document.getElementById("PrimWebworkeranimate");
     width = 1;

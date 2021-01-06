@@ -18,17 +18,20 @@ function startNav() {
     contentJson.then(contenLoaded => {
         return contenLoaded.json();
     }).then(allContent => {
+        try {
+            Object.keys(allContent).forEach(function (key){
+                let element = document.createElement("li");
+                element.className = "Navigatorli"
+                element.appendChild(document.createTextNode(key));
+                element.onclick = () => {
+                    loadContent(key);
+                }
 
-        Object.keys(allContent).forEach(function (key){
-            let element = document.createElement("li");
-            element.className = "Navigatorli"
-            element.appendChild(document.createTextNode(key));
-            element.onclick = () => {
-                loadContent(key);
-            }
-
-            headerul.appendChild(element);
-        });
+                headerul.appendChild(element);
+            });
+        } catch (e) {
+            console.log("Navigator site not loaded anymore...");
+        }
     });
 
 }

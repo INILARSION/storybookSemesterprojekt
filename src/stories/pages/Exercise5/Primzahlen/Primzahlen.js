@@ -8,6 +8,7 @@ let animation;
 let Primzahldiv;
 let animate;
 let stop;
+let lastPrime;
 
 function getPrimes() {
     Primzahldiv = document.getElementById("Primzahldiv");
@@ -50,7 +51,7 @@ function nextPrime(value) {
     return value === 2 ? 3 : 2;
 }
 
-let lastPrime = 0;
+
 
 function writePrimes(){
     lastPrime = nextPrime(lastPrime);
@@ -58,8 +59,6 @@ function writePrimes(){
     Primzahldiv.appendChild(document.createElement("br"));
     if (!stop) {
         setTimeout(writePrimes, 0);
-    } else {
-        alert("Max prime number was: " + lastPrime);
     }
 }
 
@@ -67,6 +66,7 @@ function writePrimes(){
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
+    lastPrime = 0;
     setTimeout(getPrimes, 1000);
 }
 

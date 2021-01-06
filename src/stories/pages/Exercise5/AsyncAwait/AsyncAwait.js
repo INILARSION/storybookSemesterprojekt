@@ -4,6 +4,11 @@ import React from 'react';
 
 async function makeRequest(){
     let asyncAwaitdiv = document.getElementById("AsyncAwaitdiv");
+    try {
+        asyncAwaitdiv.innerHTML = "";
+    } catch (e) {
+        console.log("Site not loaded anymore...");
+    }
     const aPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/A.txt");
     const bPromiseAwait = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/B.txt");
 
@@ -16,16 +21,19 @@ async function makeRequest(){
     textB = textB.split("\n");
 
     let maxLen = Math.max(textA.length, textB.length);
-
-    for (let i = 0; i < maxLen; i++) {
-        if (i < textA.length) {
-            asyncAwaitdiv.appendChild(document.createTextNode(textA[i]));
-            asyncAwaitdiv.appendChild(document.createElement("br"));
+    try {
+        for (let i = 0; i < maxLen; i++) {
+            if (i < textA.length) {
+                asyncAwaitdiv.appendChild(document.createTextNode(textA[i]));
+                asyncAwaitdiv.appendChild(document.createElement("br"));
+            }
+            if (i < textB.length) {
+                asyncAwaitdiv.appendChild(document.createTextNode(textB[i]));
+                asyncAwaitdiv.appendChild(document.createElement("br"));
+            }
         }
-        if (i < textB.length) {
-            asyncAwaitdiv.appendChild(document.createTextNode(textB[i]));
-            asyncAwaitdiv.appendChild(document.createElement("br"));
-        }
+    } catch (e) {
+        console.log("Site not loaded anymore...");
     }
 }
 

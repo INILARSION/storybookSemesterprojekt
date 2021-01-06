@@ -15,16 +15,19 @@ function promiseRequest() {
             textB = textB.split("\n");
 
             let maxLen = Math.max(textA.length, textB.length);
-
-            for (let i = 0; i < maxLen; i++) {
-                if (i < textA.length) {
-                    promisesdiv.appendChild(document.createTextNode(textA[i]));
-                    promisesdiv.appendChild(document.createElement("br"));
+            try {
+                for (let i = 0; i < maxLen; i++) {
+                    if (i < textA.length) {
+                        promisesdiv.appendChild(document.createTextNode(textA[i]));
+                        promisesdiv.appendChild(document.createElement("br"));
+                    }
+                    if (i < textB.length) {
+                        promisesdiv.appendChild(document.createTextNode(textB[i]));
+                        promisesdiv.appendChild(document.createElement("br"));
+                    }
                 }
-                if (i < textB.length) {
-                    promisesdiv.appendChild(document.createTextNode(textB[i]));
-                    promisesdiv.appendChild(document.createElement("br"));
-                }
+            } catch (e) {
+                console.log("Site not loaded anymore...");
             }
         });
     });
