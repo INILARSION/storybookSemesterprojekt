@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.9ec113cc.chunk.css",
-    "main.js": "./main.8896a3af88db1071c3da.bundle.js",
+    "main.js": "./main.826d63b1be04af94c8f4.bundle.js",
     "main.css.map": "./static/css/main.9ec113cc.chunk.css.map",
-    "main.js.map": "./main.8896a3af88db1071c3da.bundle.js.map",
-    "runtime~main.js": "./runtime~main.8896a3af88db1071c3da.bundle.js",
-    "runtime~main.js.map": "./runtime~main.8896a3af88db1071c3da.bundle.js.map",
-    "vendors~main.js": "./vendors~main.8896a3af88db1071c3da.bundle.js",
-    "vendors~main.js.map": "./vendors~main.8896a3af88db1071c3da.bundle.js.map",
+    "main.js.map": "./main.826d63b1be04af94c8f4.bundle.js.map",
+    "runtime~main.js": "./runtime~main.826d63b1be04af94c8f4.bundle.js",
+    "runtime~main.js.map": "./runtime~main.826d63b1be04af94c8f4.bundle.js.map",
+    "vendors~main.js": "./vendors~main.826d63b1be04af94c8f4.bundle.js",
+    "vendors~main.js.map": "./vendors~main.826d63b1be04af94c8f4.bundle.js.map",
     "iframe.html": "./iframe.html",
     "static/media/U1E1.808c4fca.png": "./static/media/U1E1.808c4fca.png",
     "static/media/U1E2.723ff66e.png": "./static/media/U1E2.723ff66e.png",
@@ -21,12 +21,12 @@
     "static/media/U7E1.4bc6b783.png": "./static/media/U7E1.4bc6b783.png",
     "static/media/U7E3.9537a01d.png": "./static/media/U7E3.9537a01d.png",
     "static/media/U7E4.7b686328.png": "./static/media/U7E4.7b686328.png",
-    "vendors~main.8896a3af88db1071c3da.bundle.js.LICENSE.txt": "./vendors~main.8896a3af88db1071c3da.bundle.js.LICENSE.txt"
+    "vendors~main.826d63b1be04af94c8f4.bundle.js.LICENSE.txt": "./vendors~main.826d63b1be04af94c8f4.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.8896a3af88db1071c3da.bundle.js",
-    "vendors~main.8896a3af88db1071c3da.bundle.js",
+    "runtime~main.826d63b1be04af94c8f4.bundle.js",
+    "vendors~main.826d63b1be04af94c8f4.bundle.js",
     "static/css/main.9ec113cc.chunk.css",
-    "main.8896a3af88db1071c3da.bundle.js"
+    "main.826d63b1be04af94c8f4.bundle.js"
   ]
 }
