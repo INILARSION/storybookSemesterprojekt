@@ -28,6 +28,11 @@
     color: lightgray;
 }
 
+.frontpageimage {
+    display: inline-block;
+    padding: 0.8%;
+}
+
 #frontpageContent img {
     margin: 5px;
     width: 100px;

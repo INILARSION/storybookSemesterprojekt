@@ -97,6 +97,11 @@
     color: lightgray;
 }
 
+.frontpageimage {
+    display: inline-block;
+    padding: 0.8%;
+}
+
 #frontpageContent img {
     margin: 5px;
     width: 100px;
@@ -902,4 +907,4 @@ div #buttonE3 {
 #Primzahlcontainer {background-color: lightgrey;   }
 #Primzahlanimate {background-color: yellow;   }
 
-/*# sourceMappingURL=main.9ec113cc.chunk.css.map*/
+/*# sourceMappingURL=main.3510c7fd.chunk.css.map*/
