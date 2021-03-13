@@ -55,6 +55,8 @@ function nextPrime(value) {
 
 function writePrimes(){
     lastPrime = nextPrime(lastPrime);
+    if (Primzahldiv === null || Primzahldiv === undefined)
+        return;
     Primzahldiv.appendChild(document.createTextNode(lastPrime));
     Primzahldiv.appendChild(document.createElement("br"));
     if (!stop) {
@@ -67,7 +69,11 @@ function writePrimes(){
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
     lastPrime = 0;
-    setTimeout(getPrimes, 1000);
+    let div = document.getElementById("Primzahldiv");
+    if (div === undefined || div === null)
+        setTimeout(delay_call, 10);
+    else
+        getPrimes();
 }
 
 function PrimzahlenTag (props) {

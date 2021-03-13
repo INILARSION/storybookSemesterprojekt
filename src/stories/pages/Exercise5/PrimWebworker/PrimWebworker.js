@@ -18,7 +18,8 @@ function getPrimes() {
     animate = document.getElementById("PrimWebworkeranimate");
     width = 1;
     t1 = performance.now();
-
+    if (PrimWebworkerdiv === null || PrimWebworkerdiv === undefined)
+        return;
     worker.addEventListener('message', function(lastPrime) {
         PrimWebworkerdiv.appendChild(document.createTextNode(lastPrime.data));
         PrimWebworkerdiv.appendChild(document.createElement("br"));
@@ -87,7 +88,10 @@ function writePrimes(){
     let blob = new Blob([webworker_str], {type: 'application/javascript'});
 
     worker = new Worker(URL.createObjectURL(blob));
-    setTimeout(getPrimes, 1000);
+    if (document.getElementById("PrimWebworkerdiv") === undefined || document.getElementById("PrimWebworkerdiv") === null)
+        setTimeout(delay_call, 10);
+    else
+        getPrimes();
 }
 
 function PrimWebworkerTag (props) {

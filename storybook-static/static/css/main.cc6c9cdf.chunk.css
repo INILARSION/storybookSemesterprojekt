@@ -53,7 +53,7 @@
     font-family: Arial, sans-serif;
     grid-area: content;
     text-align: center;
-    min-height: calc(100vh - 48px - 85px);
+    min-height: calc(100vh - 48px - 125px);
     background-color: #ececec;
 }
 
@@ -907,4 +907,4 @@ div #buttonE3 {
 #Primzahlcontainer {background-color: lightgrey;   }
 #Primzahlanimate {background-color: yellow;   }
 
-/*# sourceMappingURL=main.3510c7fd.chunk.css.map*/
+/*# sourceMappingURL=main.cc6c9cdf.chunk.css.map*/

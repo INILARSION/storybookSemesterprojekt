@@ -13,12 +13,18 @@ async function GGTWASM() {
         }
     }
     let body = document.getElementById("GGTDIV");
+    if (body === null || body === undefined)
+        return;
     body.innerHTML = output;
 }
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    setTimeout(GGTWASM, 1000);
+    let div = document.getElementById("GGTDIV");
+    if (div === undefined || div === null)
+        setTimeout(delay_call, 10);
+    else
+        GGTWASM();
 }
 
 function GGTTag (props) {

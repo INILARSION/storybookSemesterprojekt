@@ -9,7 +9,7 @@ function EinkaufslisteTag (props) {
             Enter a new item: <input id={"EinkaufslisteInput"} type="text"/>
             <button onClick={addItemEinkaufsliste} id={"EinkaufslisteAdd"}>Add item</button>
 
-            <ul id={"EinkaufslisteList"}>
+            <ul onLoad={delay_call()} id={"EinkaufslisteList"}>
             </ul>
         </article>
     )
@@ -17,12 +17,21 @@ function EinkaufslisteTag (props) {
 
 export default EinkaufslisteTag
 
-
-let list = document.getElementById("EinkaufslisteList");
+let list;
 let counter = 0;
+let allLoaded = false;
+function delay_call(){
+    list = document.getElementById("EinkaufslisteList");
+    if (list === null || list === undefined)
+        setTimeout(delay_call, 10);
+    else
+        allLoaded = true;
+}
 
 
 function addItemEinkaufsliste() {
+    if (!allLoaded)
+        return;
     let itemName = document.getElementById("EinkaufslisteInput").value;
     if (itemName === ""){
         return ;

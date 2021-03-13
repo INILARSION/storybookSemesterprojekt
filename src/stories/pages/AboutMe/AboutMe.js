@@ -3,6 +3,34 @@ import './AboutMe.css';
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
+function set_content() {
+    let div = document.getElementById("aboutmeContent");
+    let contentJson = fetch("https://raw.githubusercontent.com/INILARSION/storybookSemesterprojekt/master/src/stories/assets/aboutme.json");
+
+    contentJson.then(contentLoaded => {
+        return contentLoaded.json();
+    }).then(allContent => {
+        try {
+            let heading = document.createElement("h1");
+            heading.appendChild(document.createTextNode(allContent["heading"]));
+            div.appendChild(heading);
+            let text = allContent["content"];
+            let textarr = text.split("<br/>");
+            textarr.forEach(line => {
+                div.appendChild(document.createTextNode(line));
+                div.appendChild(document.createElement("br"));
+            })
+        } catch (e) {
+            console.log("Navigator site not loaded anymore...");
+        }
+    });
+}
+
+function delay_call(){
+    while(document.getElementById("aboutmeContent") === "undefined");
+    set_content();
+}
+
 function AboutMeTag (props) {
     const {...rest} = props
     return (
@@ -17,8 +45,7 @@ function AboutMeTag (props) {
             </div>
 
 
-            <div id={"aboutmeContent"}>
-                <h1>About Me</h1>
+            <div onLoad={delay_call()} id={"aboutmeContent"}>
             </div>
 
 

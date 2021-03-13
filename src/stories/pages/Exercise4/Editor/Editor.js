@@ -66,7 +66,7 @@ function EditorTag (props) {
         </span>
 
                 </div>
-                <div id="Editorcontent-area">
+                <div onLoad={delay_call()} id="Editorcontent-area">
                     <div id="Editortext-box" contentEditable>
                     </div>
                 </div>
@@ -77,30 +77,60 @@ function EditorTag (props) {
 
 export default EditorTag
 
-
-
-const buttons = document.getElementsByClassName('Editorbtn');
-for(let i = 0; i < buttons.length; i++) {
-    let button = buttons[i];
-
-    button.addEventListener('click', function(e) {
-        let action = this.dataset.action;
-        switch(action) {
-            case 'createLink':
-                execLinkAction();
-                break;
-            case 'h1':
-                execFormatAction(action);
-                break;
-            case 'h2':
-                execFormatAction(action);
-                break;
-            default:
-                execDefaultAction(action);
-        }
-
-    });
+function delay_call() {
+    if (document.getElementsByClassName('Editorbtn').length === 0)
+        setTimeout(delay_call, 1000);
+    else
+        set_button_actions();
 }
+
+function set_button_actions() {
+    let buttons = document.getElementsByClassName('Editorbtn');
+    while (buttons === null || buttons === undefined)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    if (buttons.length === 0)
+        buttons = document.getElementsByClassName('Editorbtn');
+    console.log(buttons);
+    for(let i = 0; i < buttons.length; i++) {
+        let button = buttons[i];
+
+        button.addEventListener('click', function(e) {
+            let action = this.dataset.action;
+            switch(action) {
+                case 'createLink':
+                    execLinkAction();
+                    break;
+                case 'h1':
+                    execFormatAction(action);
+                    break;
+                case 'h2':
+                    execFormatAction(action);
+                    break;
+                default:
+                    execDefaultAction(action);
+            }
+
+        });
+    }
+}
+
+
 
 function execLinkAction() {
     let linkValue = prompt('Enter link');

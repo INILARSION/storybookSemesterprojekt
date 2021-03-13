@@ -39,7 +39,11 @@ async function makeRequest(){
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    setTimeout(makeRequest, 1000);
+    let doc = document.getElementById("AsyncAwaitdiv");
+    if (doc === undefined || doc == null)
+        setTimeout(delay_call, 10);
+    else
+        makeRequest();
 }
 
 function AsyncAwaitTag (props) {

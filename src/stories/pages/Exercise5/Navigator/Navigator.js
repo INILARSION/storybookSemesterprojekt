@@ -63,7 +63,11 @@ function loadContent(text) {
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    setTimeout(startNav, 1000);
+    let nav = document.getElementById("Navigatorcenter");
+    if (nav === undefined || nav == null)
+        setTimeout(delay_call, 10);
+    else
+        startNav();
 }
 
 function NavigatorTag (props) {

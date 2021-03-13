@@ -74,6 +74,8 @@ async function loadWasm(){
         get_time_params(t0, t1);
     }
     let div = document.getElementById("PrimWASMDIV");
+    if (div === null || div === undefined)
+        return
     div.innerHTML += "WASM: Max: " + max + " Min: " + min + " Avg: " + avg/50 + "<br/>";
 }
 
@@ -91,6 +93,8 @@ function startPrimes() {
     }
 
     let div = document.getElementById("PrimWASMDIV");
+    if (div === null || div === undefined)
+        return
     div.innerHTML = "Js: Max: " + max + " Min: " + min + " Avg: " + avg/50 + "<br/>";
 
     loadWasm();
@@ -98,7 +102,11 @@ function startPrimes() {
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    setTimeout(startPrimes, 1000);
+    let div = document.getElementById("PrimWASMDIV");
+    if (div === undefined || div === null)
+        setTimeout(delay_call, 10);
+    else
+        startPrimes();
 }
 
 function PrimWASMTag (props) {

@@ -35,7 +35,11 @@ function promiseRequest() {
 
 // somehow onLoad triggers before divs can be found?!
 function delay_call(){
-    setTimeout(promiseRequest, 1000);
+    let div = document.getElementById("Promisesdiv");
+    if (div === undefined || div === null)
+        setTimeout(delay_call, 10);
+    else
+        promiseRequest();
 }
 
 function PromisesTag (props) {

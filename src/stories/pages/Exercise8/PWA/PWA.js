@@ -273,6 +273,8 @@ let worker_url = URL.createObjectURL(blob);
 function add_service_worker() {
     let pwa_body = document.getElementById("PWA");
     if ('serviceWorker' in navigator) {
+        if (pwa_body === null || pwa_body === undefined)
+            return;
         pwa_body.addEventListener('load', function() {
             navigator.serviceWorker.register(worker_url);
         });
@@ -280,7 +282,11 @@ function add_service_worker() {
 }
 
 function delay_call(){
-    setTimeout(add_service_worker, 1000);
+    let pwa = document.getElementById("PWA");
+    if (pwa === undefined || pwa === null)
+        setTimeout(delay_call, 10);
+    else
+        add_service_worker();
 }
 
 function PWATag (props) {

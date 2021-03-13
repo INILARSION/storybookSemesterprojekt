@@ -8,7 +8,7 @@ function RednerlisteTag (props) {
             Neuer Redner: <input id={"RednerlisteInput"} type="text"/>
             <button onClick={addItemRednerliste} id={"RednerlisteAdd"}>Hinzufügen</button>
 
-            <ul id={"RednerlisteList"}>
+            <ul onLoad={delay_call()} id={"RednerlisteList"}>
             </ul>
         </article>
     )
@@ -19,12 +19,21 @@ export default RednerlisteTag
 
 let Rednerlistecounter = 0;
 let activeCounter = "";
+let allLoaded = false;
 
-
+function delay_call(){
+    let input = document.getElementById("RednerlisteInput");
+    if (input === undefined || input === null)
+        setTimeout(delay_call, 10);
+    else
+        allLoaded = true;
+}
 
 
 
 function addItemRednerliste() {
+    if (!allLoaded)
+        return;
     let itemName = document.getElementById("RednerlisteInput").value;
     if (itemName === ""){
         return ;
@@ -57,6 +66,8 @@ function addItemRednerliste() {
 
 function countRednerliste(id) {
     let textDiv = document.getElementById("t" + id);
+    if (textDiv === null || textDiv === undefined)
+        return;
     let time = textDiv.firstChild.nodeValue;
     textDiv.removeChild(textDiv.firstChild);
     textDiv.appendChild(createTimeText(time, 1));

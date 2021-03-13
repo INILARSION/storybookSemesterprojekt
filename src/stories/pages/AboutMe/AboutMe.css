@@ -19,7 +19,7 @@
     font-family: Arial, sans-serif;
     grid-area: content;
     text-align: center;
-    min-height: calc(100vh - 48px - 85px);
+    min-height: calc(100vh - 48px - 125px);
     background-color: #ececec;
 }
 
